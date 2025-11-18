@@ -1,0 +1,287 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Merriweather", serif;
+  /* font-family: "Inter", sans-serif; */
+  color: #374151; /* softer gray */
+  background-image: linear-gradient(to bottom right, #0d0d0d, #000000, #0d101b);
+  line-height: 1.6;
+  font-weight: 700;
+}
+
+.font-outfit {
+  font-family: "Outfit", sans-serif;
+}
+
+.font-susi {
+  font-family: "SUSE Mono", sans-serif;
+}
+
+nav {
+  font-family: "SUSE Mono", sans-serif;
+}
+
+/* SECTIONS */
+.section {
+  opacity: 0;
+  display: none;
+  transition: opacity 0.4s ease-in-out;
+  min-height: 100vh;
+}
+.section.active {
+  opacity: 1;
+  display: block;
+}
+
+/* JOB CARDS */
+.job-card {
+  transition: all 0.3s ease;
+  border-radius: 16px solid;
+  font-family: "Montserrat", sans-serif;
+}
+.job-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* BUTTONS */
+.gradient-btn {
+  background: linear-gradient(90deg, #1447e6, #1c398e);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.gradient-btn:hover {
+  box-shadow: 0 0 15px rgba(20, 71, 230, 0.6);
+  transform: translateY(-2px);
+}
+
+.gradient-bg {
+  background: #012429;
+  background: linear-gradient(
+    59deg,
+    rgba(1, 36, 41, 1) 0%,
+    rgba(2, 5, 31, 1) 20%,
+    rgba(6, 49, 82, 1) 60%,
+    rgba(0, 0, 0, 1) 85%
+  );
+}
+
+.border-b-gradient {
+  border-image: linear-gradient(
+    59deg,
+    rgba(20, 71, 230, 0.6) 40%,
+    rgb(236, 118, 72) 50%,
+    rgb(199, 152, 64) 60%,
+    rgba(6, 182, 212, 1) 100%
+  );
+  border-image-slice: 1;
+  animation: gradientFlow 6s linear infinite;
+}
+
+.gradient-primary {
+  background: linear-gradient(
+    59deg,
+    rgba(20, 71, 230, 0.6) 40%,
+    rgb(236, 118, 72) 50%,
+    rgb(199, 152, 64) 60%,
+    rgba(6, 182, 212, 1) 100%
+  );
+}
+
+.gradient-primary-text {
+  background: linear-gradient(
+    59deg,
+    rgba(20, 71, 230, 0.6) 40%,
+    rgb(236, 118, 72) 50%,
+    rgb(199, 152, 64) 60%,
+    rgba(6, 182, 212, 1) 100%
+  );
+  color: transparent;
+  background-clip: text;
+}
+
+@keyframes gradientFlow {
+  0% {
+    border-image-source: rgba(20, 71, 230, 0.6) 20%, rgba(236, 72, 153, 1) 50%,
+      rgba(195, 199, 64, 1) 60%, rgba(6, 182, 212, 1) 85%;
+  }
+  100% {
+    border-image-source: rgba(20, 71, 230, 0.6) 20%, rgba(236, 72, 153, 1) 50%,
+      rgba(195, 199, 64, 1) 60%, rgba(6, 182, 212, 1) 85%;
+  }
+}
+
+/* FAQ */
+.faq-question {
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.faq-question:hover {
+  background: #f3f4f6;
+  color: #1447e6;
+  border-radius: 8px;
+}
+
+/* TOOLTIP */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 333px;
+  background: #1c398e;
+  color: #f9fafb;
+  text-align: center;
+  border-radius: 8px;
+  padding: 8px;
+  position: absolute;
+  z-index: 10;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -110px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* DRAG & DROP */
+.drag-drop {
+  border: 2px dashed #9ca3af;
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+.drag-drop.drag-over {
+  border-color: #1447e6;
+  background: #eef2ff;
+  color: #1c398e;
+}
+
+/* Neon gradient button */
+.apply-btn {
+  background: linear-gradient(
+    59deg,
+    rgba(20, 71, 230, 0.6) 40%,
+    rgb(236, 118, 72) 50%,
+    rgb(199, 152, 64) 60%,
+    rgba(6, 182, 212, 1) 100%
+  );
+  color: white;
+  padding: 20px 30px;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.4), 0 0 20px rgba(141, 35, 255, 0.3);
+}
+
+.apply-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.5), 0 0 40px rgba(141, 35, 255, 0.5);
+}
+
+/* Subtle glow for border box on hover */
+div[style*="border-image"]:hover {
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3), 0 0 35px rgba(141, 35, 255, 0.3);
+}
+
+/* Fade-in animation for smooth entrance */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.job-card,
+.apply-btn {
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* BUTTONS */
+.apply-btn,
+.learn-btn {
+  font-size: 17px;
+  padding: 1ch 2ch;
+  width: 200px;
+  border: none;
+  border-radius: 16px 48px 16px 48px; /* top-left, top-right, bottom-right, bottom-left */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+
+  font-weight: 800; /* bolder text */
+  text-align: center;
+  letter-spacing: 1px; /* adds some spacing for sharp look */
+  text-transform: camelcase;
+}
+/* Apply Now - neon gradient */
+.apply-btn {
+  background: linear-gradient(90deg, #00fafa, hsl(323, 65%, 45%));
+  color: #fff;
+  border-radius: 68px 10px 68px 10px; /* top-left, top-right, bottom-right, bottom-left */
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.4), 0 0 20px rgba(141, 35, 255, 0.3);
+}
+.apply-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.5), 0 0 40px rgba(141, 35, 255, 0.5);
+}
+
+/* From Uiverse.io by ZacharyCrespin  */
+.apply-btn {
+  transition: all 0.5s;
+  font-size: 17px;
+  padding: 1ch 2ch;
+  background-color: white;
+  color: #000;
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 2px 2px 0px hsl(0, 0%, 90%), 4px 4px 0px hsl(0, 0%, 80%),
+    6px 6px 0px hsl(0, 0%, 70%), 8px 8px 0px hsl(0, 0%, 60%),
+    10px 10px 0px hsl(0, 0%, 50%), 12px 12px 0px hsl(0, 0%, 40%),
+    14px 14px 0px hsl(0, 0%, 30%), 16px 16px 0px hsl(0, 0%, 20%),
+    18px 18px 0px hsl(0, 0%, 10%);
+}
+
+/* FADE-IN ANIMATION */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.job-card,
+.apply-btn,
+.learn-btn {
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* FOOTER GLOW BAR */
+.footer-glow {
+  height: 1px;
+  width: 66%;
+  margin: 5rem auto 0;
+  border-radius: 9999px;
+  background: linear-gradient(to right, #00fafa, #8d23ff);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.3), 0 0 25px rgba(141, 35, 255, 0.3);
+}
+
+/* OPTIONAL: Drag & Drop */
+.drag-drop {
+  border: 2px dashed #9ca3af;
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+.drag-drop.drag-over {
+  border-color: #1447e6;
+  background: #eef2ff;
+  color: #1c398e;
+}

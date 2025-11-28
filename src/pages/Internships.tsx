@@ -20,7 +20,7 @@ const Internships: React.FC = () => {
           to
         </h5>
         <h1 className="text-4xl md:text-6xl font-extrabold gradient-primary-text  bg-clip-text text-transparent">
-          HydroBank Internship Program
+          HydroFinance Internship Program
         </h1>
       </motion.header>
 
@@ -32,8 +32,8 @@ const Internships: React.FC = () => {
         transition={{ duration: 0.7 }}
       >
         <p className="text-blue-50 text-lg md:text-2xl font-medium leading-relaxed">
-          Join HydroBank’s internship program and work on cutting-edge financial
-          technologies. Gain real-world experience, mentorship, and an
+          Join HydroFinance internship program and work on cutting-edge
+          financial technologies. Gain real-world experience, mentorship, and an
           opportunity to shape the future of banking.
         </p>
       </motion.div>

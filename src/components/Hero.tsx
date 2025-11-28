@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
-            <span className="gradient-primary-text">HYDROBANK</span>{" "}
+            <span className="gradient-primary-text">HydroFinance</span>{" "}
             <span className="text-white">Careers</span>
           </h1>
 

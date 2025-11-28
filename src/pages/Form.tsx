@@ -273,7 +273,7 @@ const Form: React.FC = () => {
             id="message"
             name="message"
             rows={3}
-            placeholder="Tell us why you're interested in HydroBank..."
+            placeholder="Tell us why you're interested in HydroFinance..."
             value={formData.message}
             onChange={handleChange}
             className="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-400 focus:ring focus:ring-blue-200"

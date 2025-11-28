@@ -19,7 +19,7 @@ export function RequirementsModal() {
       <DialogContent className="w-full   bg-neutral-900 text-white">
         <DialogHeader>
           <DialogTitle className="text-3xl text-center mb-4">
-            <span className="text-blue-500 font-bold">HydroBank</span>–
+            <span className="text-blue-500 font-bold">HydroFinance</span>–
             Universal Hiring Requirements
           </DialogTitle>
           <DialogDescription className="text-base ">

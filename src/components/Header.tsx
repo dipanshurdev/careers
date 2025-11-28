@@ -16,7 +16,7 @@ const Header = () => {
         <div className="w-full">
           <a className="flex items-center gap-2" href=" /">
             <img src={Logo} alt="Logo" className="w-14 h-14 rounded-full" />
-            <h1 className=" font-bold text-2xl text-blue-500">HYDROBANK</h1>
+            <h1 className=" font-bold text-2xl text-blue-500">HydroFinance</h1>
           </a>
         </div>
 
